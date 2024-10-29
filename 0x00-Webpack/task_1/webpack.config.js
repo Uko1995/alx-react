@@ -9,8 +9,4 @@ module.exports ={
         filename: 'bundle.js'
     },
     mode: 'production',
-    plugins: [
-        new HtmlWebpackPlugin({
-            title: 'Webstack Output'}),
-    ],
 };
