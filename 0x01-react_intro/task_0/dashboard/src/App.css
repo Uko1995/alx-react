@@ -44,3 +44,7 @@
   position: fixed;
   bottom: 0;
 }
+
+.App-footer p {
+  font-style: italic;
+}
