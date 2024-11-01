@@ -9,14 +9,10 @@ import reportWebVitals from './reportWebVitals';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+    <div className='root-notifications'>
+      <Notifications />
+    </div>
     <App />
-  </React.StrictMode>
-);
-
-const notification = ReactDOM.createRoot(document.getElementById('notifications'));
-notification.render(
-  <React.StrictMode>
-    <Notifications />
   </React.StrictMode>
 );
 

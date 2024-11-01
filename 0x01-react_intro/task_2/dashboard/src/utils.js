@@ -9,3 +9,7 @@ export function getFooterCopy(isIndex) {
         <p>Holberton School main dashboard</p>
     );
 }
+
+export function getLatestNotification() {
+    return "<strong>Urgent requirement</strong> - complete by EOD";
+}
