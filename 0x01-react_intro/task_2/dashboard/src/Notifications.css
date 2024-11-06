@@ -1,0 +1,12 @@
+:root {
+    --color-brand: #e01d3f;
+    --font: Arial, Helvetica, sans-serif;
+    --font-s: 2.5vmin;
+  }
+
+.Notifications {
+    border: 2px dashed var(--color-brand);
+    padding: 20px;
+    font-size: var(--font-s);
+    font-family: var(--font);
+}
