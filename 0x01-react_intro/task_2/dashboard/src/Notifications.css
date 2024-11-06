@@ -3,30 +3,4 @@
     border-radius: 3px;
     padding: 10px;
     margin: 10px 0;
-    font-size: 1.2rem;
-}
-
-.Notifications button {
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-}
-
-.Notifications button img {
-    width: 20px;
-    height: 20px;
-    cursor: pointer;
-    background-color: transparent;
-}
-
-li[data-priority="default"] {
-    color: rgb(47, 47, 211);
-}
-
-li[data-priority="urgent"] {
-    color: red;
-}
-
-.danger {
-    font-style: italic;
 }
