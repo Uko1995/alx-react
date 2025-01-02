@@ -1,0 +1,30 @@
+:root {
+    --color-brand: #e01d3f;
+    --font: Arial, Helvetica, sans-serif;
+    --font-s: 2.5vmin;
+  }
+
+.Notifications {
+    border: 2px dashed var(--color-brand);
+    padding: 20px;
+    font-size: var(--font-s);
+    font-family: var(--font);
+}
+
+.Notifications button {
+    font-size: var(--font-s);
+    margin: 10px;
+}
+
+.Notifications button img {
+    height: 20px;
+    width: 20px;
+}
+
+li[data-notification-type="default"] {
+    color: blue;
+}
+
+li[data-notification-type="urgent"] {
+    color: red;
+}
