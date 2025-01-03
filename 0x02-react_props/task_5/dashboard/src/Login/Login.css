@@ -1,0 +1,22 @@
+:root {
+  --color-brand: #e01d3f;
+  --font:  Arial, Helvetica, sans-serif
+}
+
+html {
+  font-size: 62.5%;
+  font-family: var(--font);
+}
+
+.App-body {
+    margin: 40px; 
+    font-size: 2.5vmin;
+    height: 100vh;
+  }
+  
+  .App-body input, .App-body label, .App-body button {
+    font-size: 2.5vmin;
+    margin: 10px;
+  }
+  
+  
