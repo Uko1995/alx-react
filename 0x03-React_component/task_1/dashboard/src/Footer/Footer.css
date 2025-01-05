@@ -1,0 +1,24 @@
+:root {
+  --color-brand: #e01d3f;
+  --font:  Arial, Helvetica, sans-serif
+}
+
+html {
+  font-size: 62.5%;
+  font-family: var(--font);
+}
+
+.App-footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-top: 2px solid var(--color-brand);
+    width: 100%;
+    bottom: 0;
+    justify-content: center;
+  }
+  
+  .App-footer p {
+    font-size: 2.5vmin;
+    font-style: italic;
+  }
