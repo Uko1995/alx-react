@@ -1,6 +1,5 @@
 import React, { Children } from 'react';
 import PropTypes from 'prop-types';
-import './BodySection.css';
 
 
 export default function BodySection({ title='', Children }) {

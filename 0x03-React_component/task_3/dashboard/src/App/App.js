@@ -56,7 +56,7 @@ class App extends React.Component {
           <BodySectionWithMarginBottom title='Course list'>
             <CourseList listCourses={this.listCourses}/>
           </BodySectionWithMarginBottom>
-          <BodySectionWithMarginBottom title='News from the School'>
+          <BodySectionWithMarginBottom title='Log in to continue'>
             <Login/>
           </BodySectionWithMarginBottom>
           <BodySection title='News from the School'>
