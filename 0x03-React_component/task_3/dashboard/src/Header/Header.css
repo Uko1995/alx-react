@@ -1,0 +1,27 @@
+:root {
+    --color-brand: #e01d3f;
+    --font:  Georgia, 'Times New Roman', Times, serif;
+  }
+  
+  html {
+    font-size: 62.5%;
+    font-family: var(--font);
+  }
+  
+  .App-header {
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid var(--color-brand);
+    width: 100%;
+  }
+  
+  .App-header img {
+    height: 30vmin;
+    pointer-events: none;
+  }
+  
+  .App-header h1 {
+    font-size: 5vmin;
+    color: var(--color-brand);
+    font-family: Georgia, 'Times New Roman', Times, serif
+  }
