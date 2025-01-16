@@ -1,4 +1,3 @@
-import './App.css';
 import React from 'react';
 import Notifications from '../Notifications/Notifications';
 import Header from '../Header/Header';
@@ -9,8 +8,14 @@ import CourseList from '../CourseList/CourseList';
 import { getLatestNotification } from '../utils/utils';
 import BodySectionWithMarginBottom from '../BodySection/BodySectionWithMarginBottom';
 import BodySection from '../BodySection/BodySection';
+import { StyleSheet, css } from 'aphrodite';
 
-
+const styles = StyleSheet.create({
+  bodyStyle: {
+    fontFamily:  'Arial, Helvetica, sans-serif',
+    fontSize: '62.5%'
+  }
+});
 
 
 class App extends React.Component {
@@ -50,17 +55,25 @@ class App extends React.Component {
     const { isLoggedIn=false, logOut=(() => {}) } = this.props;
     return (
       <>
-        <Notifications listNotifications={this.listNotifications} displayDrawer={true}/>
-        <div className='App'>
+        <div>
+          <Notifications listNotifications={this.listNotifications} displayDrawer={true}/>
           <Header />
-          <BodySectionWithMarginBottom title='Course list'>
-            <CourseList listCourses={this.listCourses}/>
-          </BodySectionWithMarginBottom>
-          <BodySectionWithMarginBottom title='Log in to continue'>
-            <Login/>
-          </BodySectionWithMarginBottom>
+        </div>
+        <div className={css(styles.bodyStyle)}>
+          {isLoggedIn ?
+            <BodySectionWithMarginBottom title='Course list'>
+              <CourseList listCourses={this.listCourses}/>
+            </BodySectionWithMarginBottom>
+            :
+            <BodySectionWithMarginBottom title='Log in to continue'>
+              <Login/>
+            </BodySectionWithMarginBottom>
+          }
           <BodySection title='News from the School'>
-            <p>Some news</p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis at tempora odio, necessitatibus repudiandae reiciendis cum nemo sed asperiores ut molestiae eaque aliquam illo ipsa
+              iste vero dolor voluptates.
+            </p>
           </BodySection>
           <Footer />
         </div>

@@ -1,17 +1,17 @@
-import React, { Children } from 'react';
+import React, { children } from 'react';
 import PropTypes from 'prop-types';
 
 
-export default function BodySection({ title='', Children }) {
+export default function BodySection({ title='', children }) {
     return (
         <div className='bodySection'>
             <h2>{title}</h2>
-            {Children}
+            {children}
         </div>
     )
 }
 
 BodySection.propTypes = {
     title: PropTypes.string.isRequired,
-    Children: PropTypes.node
+    children: PropTypes.node
 }

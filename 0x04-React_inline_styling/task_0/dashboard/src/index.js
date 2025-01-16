@@ -1,10 +1,22 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './App/App.css';
 import App from './App/App';
 import reportWebVitals from './reportWebVitals';
+import { StyleSheet, css } from 'aphrodite';
+
+const globalStyles = StyleSheet.create({
+  root: {
+    fontFamily:  'Arial, Helvetica, sans-serif'
+  },
+  html: {
+    fontSize: '62.5%',
+    fontFamily: 'Arial, sans-serif'
+  }
+});
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+document.documentElement.className = css(globalStyles.html);
+document.getElementById('root').className = css(globalStyles.root);
 root.render(
   <React.StrictMode>
     <App isLoggedIn={true}/>

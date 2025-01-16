@@ -1,12 +1,12 @@
 #CourseList {
     width: 80%;
     border-collapse: collapse;
-    margin: 90px auto;
+    margin: 0.5em auto;
     font-family: Georgia, 'Times New Roman', Times, serif;
     border-collapse: collapse;
     
 }
-#CourseList th:first-child {
+#CourseList th:nth-child(1) {
     text-align: center;
 }
 
