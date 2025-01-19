@@ -72,7 +72,7 @@ const styles = StyleSheet.create({
         }
     },
     p: {
-        fontSize: '30px',
+        fontSize: '1.2em',
     }
 });
 
