@@ -9,7 +9,9 @@ export const map = Map({
     6: 'Lucas',
 });
 
-export const map2 = map.set(2, 'Benjamin').set(4, map.get(4) === '0liver' ? map.get(4) : 'Oliver');
+export const map2 = map.withMutations((tempMap) => {
+    map.set(2, 'Benjamin').set(4, map.get(4) === '0liver' ? map.get(4) : 'Oliver');
+});
 
 console.log('Before mutation');
 console.log(map.toObject());
