@@ -1,6 +1,6 @@
 import { Map } from 'immutable';
 
-const map = Map({
+export const map = Map({
     1: 'Liam',
     2: 'Noah',
     3: 'Elijah',
@@ -9,6 +9,9 @@ const map = Map({
     6: 'Lucas',
 });
 
-const map2 = map.set(2, 'Benjamin').set(4, 'Oliver');
+export const map2 = map.set(2, 'Benjamin').set(4, 'Oliver');
 
-export default [map, map2];
+console.log('Before mutation');
+console.log(map.toObject());
+console.log('After mutation');
+console.log(map2.toObject());
