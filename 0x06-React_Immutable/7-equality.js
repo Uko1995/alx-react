@@ -1,7 +1,7 @@
-import  { Map, isMap } from 'immutable';
+import  { Map, is } from 'immutable';
 
 export default function areMapsEqual(map1=Object, map2=Object) {
-    return (isMap(map1) && isMap(map2)) ? true : false;
+    return is(map1, map2);
 }
 
 const map1 = new Map(
