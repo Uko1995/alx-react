@@ -17,3 +17,5 @@ console.log('Before mutation');
 console.log(map.toObject());
 console.log('After mutation');
 console.log(map2.toObject());
+
+export default [map, map2];
