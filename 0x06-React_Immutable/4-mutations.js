@@ -15,3 +15,5 @@ const map2 = Map({
 });
 
 map.merge(map2);
+
+export default [map, map2];
