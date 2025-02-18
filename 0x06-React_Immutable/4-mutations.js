@@ -9,11 +9,6 @@ const map = Map({
     6: 'Lucas',
 });
 
-const map2 = Map({
-    2: 'Benjamin',
-    4: 'Oliver'
-});
-
-map.merge(map2);
+const map2 = map.set(2, 'Benjamin').set(4, 'Oliver');
 
 export default [map, map2];
