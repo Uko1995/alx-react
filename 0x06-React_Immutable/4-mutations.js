@@ -10,7 +10,7 @@ export const map = Map({
 });
 
 export const map2 = map.withMutations((tempMap) => {
-    map.set(2, 'Benjamin').set(4, map.get(4) === '0liver' ? map.get(4) : 'Oliver');
+    tempMap.set(2, 'Benjamin').set(4, 'Oliver');
 });
 
 console.log('Before mutation');
