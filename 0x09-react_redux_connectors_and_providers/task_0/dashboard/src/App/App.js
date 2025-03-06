@@ -1,17 +1,16 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import Notifications from '../Notifications/Notifications';
-import Header from '../Header/Header';
-import Footer from '../Footer/Footer';
-import Login from '../Login/Login';
+import Notifications from '../Notifications/Notifications.js';
+import Header from '../Header/Header.js';
+import Footer from '../Footer/Footer.js';
+import Login from '../Login/Login.js';
 import PropTypes from 'prop-types';
-import CourseList from '../CourseList/CourseList';
-import { getLatestNotification } from '../utils/utils';
-import BodySectionWithMarginBottom from '../BodySection/BodySectionWithMarginBottom';
-import BodySection from '../BodySection/BodySection';
+import CourseList from '../CourseList/CourseList.js';
+import { getLatestNotification } from '../utils/utils.js';
+import BodySectionWithMarginBottom from '../BodySection/BodySectionWithMarginBottom.js';
+import BodySection from '../BodySection/BodySection.js';
 import { StyleSheet, css } from 'aphrodite';
-import { defaultLogOut, defaultUser, AppContext } from './AppContext';
-import { uiReducer } from '../reducers/uiReducer';
+import { defaultLogOut, defaultUser, AppContext } from './AppContext.js';
 import { is } from 'immutable';
 
 const styles = StyleSheet.create({
@@ -129,7 +128,7 @@ App.propTypes = {
 };
 
 export const mapStateToProps = (state) => {
-  return { isLoggedIn: state.get('isLoggedin') };
+  return { isLoggedIn: state.get('isUserLoggedin') };
 }
 
 
