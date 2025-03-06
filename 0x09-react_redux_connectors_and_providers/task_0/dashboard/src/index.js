@@ -1,8 +1,10 @@
 import React from 'react';
+import { createStore, Provider } from 'react-redux';
 import ReactDOM from 'react-dom/client';
 import App from './App/App';
 import reportWebVitals from './reportWebVitals';
 import { StyleSheet, css } from 'aphrodite';
+import { uiReducer } from './reducers/uiReducer';
 
 const globalStyles = StyleSheet.create({
   root: {
@@ -14,12 +16,16 @@ const globalStyles = StyleSheet.create({
   }
 });
 
+const store = createStore(uiReducer);
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 document.documentElement.className = css(globalStyles.html);
 document.getElementById('root').className = css(globalStyles.root);
 root.render(
   <React.StrictMode>
-    <App isLoggedIn={false}/>
+    <Provider store={store}>
+      <App isLoggedIn={false}/>
+    </Provider>
   </React.StrictMode>
 );
 
