@@ -1,5 +1,5 @@
 import { Map } from 'immutable';
-import { DISPLAY_NOTIFICATION_DRAWER, HIDE_NOTIFICATION_DRAWER, LOGIN, LOGOUT, LOGIN_SUCCESS, LOGIN_FAILURE } from '../actions/uiActionTypes';
+import { DISPLAY_NOTIFICATION_DRAWER, HIDE_NOTIFICATION_DRAWER, LOGIN, LOGOUT, LOGIN_SUCCESS, LOGIN_FAILURE } from '../actions/uiActionTypes.js';
 
 export const initialState = {
     isNotificationDrawerVisible: false,
@@ -8,7 +8,7 @@ export const initialState = {
 };
 
 
-const uiRedicer = (state = Map(initialState), action) => {
+export const uiReducer = (state = Map(initialState), action) => {
     switch (action.type) {
         case DISPLAY_NOTIFICATION_DRAWER:
             return state.set('isNotificationDrawerVisible', true);
@@ -25,4 +25,3 @@ const uiRedicer = (state = Map(initialState), action) => {
     return state;
 }
 
-export default uiRedicer;

@@ -1,10 +1,12 @@
 import React from 'react';
-import { createStore, Provider } from 'react-redux';
+import { configureStore } from '@reduxjs/toolkit';
+import { Provider } from 'react-redux';
 import ReactDOM from 'react-dom/client';
-import App from './App/App';
-import reportWebVitals from './reportWebVitals';
+import App from './App/App.js';
+import reportWebVitals from './reportWebVitals.js';
 import { StyleSheet, css } from 'aphrodite';
-import { uiReducer } from './reducers/uiReducer';
+import { uiReducer, initialState } from './reducers/uiReducer.js';
+import { Map } from 'immutable';
 
 const globalStyles = StyleSheet.create({
   root: {
@@ -16,7 +18,7 @@ const globalStyles = StyleSheet.create({
   }
 });
 
-const store = createStore(uiReducer);
+const store = configureStore({reducer: uiReducer});
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 document.documentElement.className = css(globalStyles.html);
@@ -33,3 +35,4 @@ root.render(
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
+export default store;
